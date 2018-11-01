@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="KhBbs">
+
+<select id="getBbsList" resultType="kh.com.c.model.BbsDto">
+	SELECT SEQ, ID, REF, STEP, DEPTH, 
+				TITLE, CONTENT, WDATE, PARENT, 
+				DEL, READCOUNT
+				FROM BBS
+				ORDER BY REF DESC, STEP ASC
+</select>
+
+
+
+
+
+
+
+</mapper>  
