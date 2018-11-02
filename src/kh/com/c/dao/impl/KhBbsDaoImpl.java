@@ -23,7 +23,40 @@ public class KhBbsDaoImpl implements KhBbsDao {
 		return list;
 	}
 	
+	@Override
+	public boolean writeBbs(BbsDto bbs) throws Exception {	
+		sqlSession.insert(ns+"writeBbs",bbs);		
+		return true;
+	}
+
+	@Override
+	public void updateBbs(BbsDto bbs) {
+		sqlSession.update(ns+"updateBbs",bbs);
+	}
+
+	@Override
+	public BbsDto getBbs(int seq) throws Exception {		
+		return sqlSession.selectOne(ns+"getBbs", seq);
+	}
 	
+	
+	@Override
+	public boolean replyBbsUpdate(BbsDto bbs) throws Exception {		
+		sqlSession.update(ns+"replyBbsUpdate", bbs);
+		return true; 
+	}
+
+	@Override
+	public boolean replyBbsInsert(BbsDto bbs) throws Exception {
+		sqlSession.insert(ns+"replyBbsInsert", bbs);
+		return true;
+	}
+	
+
+	@Override
+	public void deleteBbs(int seq) throws Exception {
+		sqlSession.update(ns+"deleteBbs", seq);
+	}
 	
 	
 }

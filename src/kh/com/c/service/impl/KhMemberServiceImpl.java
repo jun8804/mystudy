@@ -24,11 +24,6 @@ public class KhMemberServiceImpl implements KhMemberService {
 		return khMemberDao.login(mem);		
 	}
 
-	@Override
-	public MemberDto logout(MemberDto mem) throws Exception {		
-		return khMemberDao.logout(mem);		
-	}
-	
 	
 }
 

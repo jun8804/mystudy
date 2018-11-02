@@ -8,5 +8,4 @@ public interface KhMemberDao {
 	
 	MemberDto login(MemberDto mem) throws Exception;
 
-	MemberDto logout(MemberDto mem) throws Exception;
 }

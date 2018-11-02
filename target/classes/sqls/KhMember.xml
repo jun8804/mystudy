@@ -17,14 +17,6 @@
 	WHERE ID=#{id} AND PWD=#{pwd}
 </select>
 
-<select id="logout" parameterType="kh.com.c.model.MemberDto"
-	resultType="kh.com.c.model.MemberDto">
-	SELECT NULL, NULL, NULL, NULL
-	FROM MEMBER
-	WHERE ID=#{null} AND PWD=#{null}
-</select>
-
-
 
 </mapper>  
 

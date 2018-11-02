@@ -20,6 +20,36 @@ public class KhBbsServiceImpl implements KhBbsService {
 		return khBbsDao.getBbsList();
 	}
 	
+	@Override
+	public boolean writeBbs(BbsDto bbs) throws Exception {		
+		return khBbsDao.writeBbs(bbs);		
+	}
+
+	
+
+	@Override	
+	public BbsDto getBbs(int seq) throws Exception {		
+		return khBbsDao.getBbs(seq);		
+	}
+	
+	@Override
+	public void updateBbs(BbsDto bbs) {
+		khBbsDao.updateBbs(bbs);
+	}
+
+	
+	@Override
+	public void reply(BbsDto bbs) throws Exception {
+		khBbsDao.replyBbsUpdate(bbs);
+		khBbsDao.replyBbsInsert(bbs);	
+	}
+	
+	
+	
+	@Override
+	public void deleteBbs(int seq) throws Exception {
+		khBbsDao.deleteBbs(seq);		
+	}
 	
 
 }

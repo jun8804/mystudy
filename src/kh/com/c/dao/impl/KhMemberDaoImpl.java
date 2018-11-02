@@ -27,13 +27,6 @@ public class KhMemberDaoImpl implements KhMemberDao{
 		return sqlSession.selectOne(namespace + "login", mem);
 	}
 	
-	@Override
-	public MemberDto logout(MemberDto mem) throws Exception {		
-		return sqlSession.selectOne(namespace + "logout", mem);
-	}
-	
-	
-	
 	
 	
 

@@ -1,7 +1,5 @@
 <%@page import="kh.com.c.model.BbsDto"%>
 <%@page import="kh.com.c.model.MemberDto"%>
-<%@page import="kh.com.c.model.BbsDto"%>
-<%@page import="kh.com.c.model.MemberDto"%>
 <%@page import="java.util.List"%>
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -40,7 +38,6 @@ th{
 <%
 Object ologin = session.getAttribute("login");
 MemberDto mem = null;
-
 if(ologin == null){
 	%>
 	<script type="text/javascript">

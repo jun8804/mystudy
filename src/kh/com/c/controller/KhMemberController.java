@@ -31,13 +31,6 @@ public class KhMemberController {
 		return "login";
 	}
 	
-	@RequestMapping(value="logout.do", method={RequestMethod.GET, RequestMethod.POST})
-	public String logout() {
-		logger.info("KhMemberController logout " + new Date());
-		
-		return "index";
-	}
-	
 	@RequestMapping(value="regi.do", method=RequestMethod.GET)
 	public String regi() {
 		logger.info("KhMemberController regi " + new Date());
