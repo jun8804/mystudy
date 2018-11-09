@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+  
+<tiles-definitions>
+
+<definition name="login.tiles" template="/WEB-INF/views/login/login.jsp">
+</definition>
+
+<definition name="regi.tiles" template="/WEB-INF/views/login/regi.jsp">
+</definition>
+
+<definition name="bbslist.tiles" template="/WEB-INF/views/layouts-tiles.jsp">
+	<put-attribute name="common" value="/WEB-INF/views/common/common.jsp"/>
+	<put-attribute name="header" value="/WEB-INF/views/common/header.jsp"/>
+	<put-attribute name="top_inc" value="/WEB-INF/views/common/top.jsp"/>
+	<put-attribute name="top_menu" value="/WEB-INF/views/common/top_menu.jsp"/>
+	<put-attribute name="left_main" value="/WEB-INF/views/common/left_bbslist.jsp"/>
+	<put-attribute name="main" value="/WEB-INF/views/bbs/bbslist.jsp"/>
+	<put-attribute name="bottom_inc" value="/WEB-INF/views/common/bottom.jsp"/>
+</definition>
+
+<definition name="bbswrite.tiles" extends="bbslist.tiles">
+	<put-attribute name="main" value="/WEB-INF/views/bbs/bbswrite.jsp"/>
+</definition>
+
+<definition name="bbsdetail.tiles" extends="bbslist.tiles">
+	<put-attribute name="main" value="/WEB-INF/views/bbs/bbsdetail.jsp"/>
+</definition>
+
+<definition name="answer.tiles" extends="bbslist.tiles">
+	<put-attribute name="main" value="/WEB-INF/views/bbs/bbsreply.jsp"/>
+</definition>
+
+<definition name="bbsupdate.tiles" extends="bbslist.tiles">
+	<put-attribute name="main" value="/WEB-INF/views/bbs/bbsupdate.jsp"/>
+</definition>
+
+<definition name="calendar.tiles" extends="bbslist.tiles">
+	<put-attribute name="left_main" value="/WEB-INF/views/common/left_calendar.jsp"/>
+	<put-attribute name="main" value="/WEB-INF/views/calendar/calendar.jsp"/>
+</definition>
+
+<definition name="calwrite.tiles" extends="calendar.tiles">
+	<put-attribute name="main" value="/WEB-INF/views/calendar/calwrite.jsp"/>
+</definition>
+
+<definition name="caldetail.tiles" extends="calendar.tiles">
+	<put-attribute name="main" value="/WEB-INF/views/calendar/caldetail.jsp"/>
+</definition>
+
+<definition name="calendarMonth.tiles" extends="calendar.tiles">
+	<put-attribute name="main" value="/WEB-INF/views/calendar/calendarMonth.jsp"/>
+</definition>
+
+</tiles-definitions>  
+
+
+
+
